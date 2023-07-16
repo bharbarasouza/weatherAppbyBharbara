@@ -1,5 +1,0 @@
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin <https://github.com/bharbarasouza/weatherapp-wk5-.git>
-git push -u origin master
