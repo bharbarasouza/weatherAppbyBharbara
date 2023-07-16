@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Bootstrap 5--> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" crossorigin="anonymous">
+   <!--Stylesheet--> <link href="style.css" rel="stylesheet">
+   <!--Axios--> <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <!--Favicon--> <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌞</text></svg>">
+   <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header"><img class="img_header" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/736/original/header_image.png?1688231601"></div>
+            <div class="forecast_container">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider"></span>
+                    <span class="toggle-text">°F</span>
+                  </label>
+            <div class="wkday">
+                <span id="wkday">Mon</span>
+                <span class="dailytemptext" id="dailytemp1">20°C</span>
+                <span class="weathericon">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
+                    </span>
+            </div>
+            <div class="wkday">        
+                <span id="wkday">Tue</span>
+                <span class="dailytemptext" id="dailytemp2">20°C</span>
+                <span class="weathericon">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
+                </span>
+            </div>
+            <div class="wkday">        
+                <span id="wkday">Wed</span>
+                <span class="dailytemptext" id="dailytemp3">20°C</span>
+                <span class="weathericon">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
+                </span>
+            </div>
+            <div class="wkday">        
+                <span id="wkday">Thu</span>
+                <span class="dailytemptext" id="dailytemp4">20°C</span>
+                <span class="weathericon">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
+                </span>
+            </div> 
+            <div class="wkday">        
+                <span id="wkday">Fri</span>
+                <span class="dailytemptext" id="dailytemp5">20°C</span>
+                <span class="weathericon">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
+                </span>
+            </div>
+            <div class="wkday">        
+                <span id="wkday">Sat</span>
+                <span class="dailytemptext" id="dailytemp6">20°C</span>
+                <span class="weathericon">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
+                </span>
+            </div>
+            </div>   
+            <div class="footer"><p>This page was coded by Bharbara Souza</p></div>
+            <div class="section_container">
+            <div class="search_container">
+            <div class="search_bar">
+            <form id="search-form">
+                 <input class="search_style" type="text" placeholder="Search for your city" autocomplete="off" autofocus="on" id="search-text-input"/>
+                 <input type="submit" class="search_button" value="Go"/>
+                 <a href="" id="currentLocation">📍Current Location</a>
+                </form>
+            </div>
+        </div>
+        <div class="todays_weather">
+        <span id="city_name"> </span>
+        <span id="date_Time">Monday, Jan 13 15:35 2023</span>        
+        <span id="todays_temp">
+            <span id="temp_celsius"></span>|<span id="temp_fahrenheit"></span>
+        </span>
+        <span id="weather_description"> </span>
+        <span class="weathericon" id="mainweathericon">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
+        </span>        
+        </div>  
+    </div>
+    </div>
+<!--JS--> <script src="index.js"></script>
+</body>
+</html>
