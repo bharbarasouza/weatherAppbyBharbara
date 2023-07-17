@@ -154,6 +154,7 @@ body {
     margin-top: 20px;
     justify-self: center;
     color: #444654;
+    transform: scale (0.8);
   }
   
  /* Search Bar Styles */
