@@ -45,11 +45,26 @@ function search(city) {
 function displayCurrentWeather(response) {
   let celsiusTemp = Math.round(response.data.main.temp);
   let fahrenheitTemp = celsiusToFahrenheit(celsiusTemp);
+  let iconElement = document.querySelector("#mainweathericon");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let pressureElement = document.querySelector('#pressure');
 
   document.querySelector("#city_name").innerHTML = response.data.name;
   document.querySelector("#temp_celsius").innerHTML = celsiusTemp + "°C";
   document.querySelector("#temp_fahrenheit").innerHTML = fahrenheitTemp + "°F";
   document.querySelector("#weather_description").innerHTML = response.data.weather[0].main;
+  
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = response.data.wind.speed;
+  pressureElement.innerHTML = response.data.main.pressure;
+
+  
+  let weatherIconCode = response.data.weather[0].icon;
+  let weatherIconUrl = weatherIconUrls[weatherIconCode];
+  iconElement.setAttribute("src", weatherIconUrl);
+  console.log(response.data);
+
 }
 
     function searchCity(event) {
@@ -59,7 +74,7 @@ function displayCurrentWeather(response) {
     }   
 
     document.querySelector("#search-form").addEventListener("submit", searchCity);
-
+    
 //Function Current Location link
 
 function handleSubmit(event) {
@@ -120,6 +135,7 @@ function searchLocation(position) {
   updateTemperatures(); 
 
   search("Sao Paulo");
+  
   
   });
 
