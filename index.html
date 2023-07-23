@@ -62,7 +62,7 @@
                 </span>
             </div>
             </div>   
-            <div class="footer"><p>This page was coded by Bharbara Souza and it's open sourced on <a href="https://github.com/bharbarasouza/weatherapp-wk5-.git">Github</a></p></div>
+            <div class="footer"><p>Open Sourced on <a href="https://github.com/bharbarasouza/weatherAppbyBharbara.git">Github</a></p><span class="emoji-container"><svg widht="30" height="30"><use xlink:href="graphics/github.svg#emoji"></use></svg></span><p>by <a href="https://www.linkedin.com/in/bharbarasouza/">Bharbara Souza</a></div>
             <div class="section_container">
             <div class="search_container">
             <div class="search_bar">
@@ -73,19 +73,27 @@
                 </form>
             </div>
         </div>
-        <div class="todays_weather">
+        <div class="todays_weather">            
         <span id="city_name"> </span>
         <span id="date_Time">Monday, Jan 13 15:35 2023</span>        
         <span id="todays_temp">
             <span id="temp_celsius"></span>|<span id="temp_fahrenheit"></span>
         </span>
-        <span id="weather_description"> </span>
-        <span class="weathericon" id="mainweathericon">
-            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
-        </span>        
+        <span id="weather_description"> </span>    
+        <span class="weathericon">
+            <img id="mainweathericon" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
+        </span>
+        <div>
+            <ul>
+         <li><img class="imgli" src="https://basmilius.github.io/weather-icons/production/fill/all/barometer.svg"></img>Pressure: <span id="pressure">0</span> hPa</li>
+        <li><img class="imgli" src="https://basmilius.github.io/weather-icons/production/fill/all/humidity.svg"></img>Humidity: <span id="humidity">73</span>%</li>
+        <li><img class="imgli" src="https://basmilius.github.io/weather-icons/production/fill/all/wind.svg"></img>Wind: <span id="wind">10</span> km/h</li>
+           </ul>
+            </div>       
         </div>  
     </div>
     </div>
 <!--JS--> <script src="index.js"></script>
+<!--IconSet--> <script src="weatherIcons.js"></script>
 </body>
 </html>
