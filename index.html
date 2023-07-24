@@ -4,64 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!--Bootstrap 5--> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" crossorigin="anonymous">
-   <!--Stylesheet--> <link href="style.css" rel="stylesheet">
+   <!--Stylesheet--> <link href="style.css" rel="stylesheet" id="main-style">
+   <!--Stylesheet for Dark Mode--> 
    <!--Axios--> <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
    <!--Favicon--> <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌞</text></svg>">
    <title>Weather App</title>
 </head>
 
 <body>
+    
     <div class="container">
-        <div class="header"><img class="img_header" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/736/original/header_image.png?1688231601"></div>
-            <div class="forecast_container">
-                <label class="toggle-switch">
-                    <input type="checkbox" id="toggle-switch">
-                    <span class="slider"></span>
-                    <span class="toggle-text">°F</span>
-                  </label>
-            <div class="wkday">
-                <span id="wkday">Mon</span>
-                <span class="dailytemptext" id="dailytemp1">20°C</span>
-                <span class="weathericon">
-                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
-                    </span>
-            </div>
-            <div class="wkday">        
-                <span id="wkday">Tue</span>
-                <span class="dailytemptext" id="dailytemp2">20°C</span>
-                <span class="weathericon">
-                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
-                </span>
-            </div>
-            <div class="wkday">        
-                <span id="wkday">Wed</span>
-                <span class="dailytemptext" id="dailytemp3">20°C</span>
-                <span class="weathericon">
-                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
-                </span>
-            </div>
-            <div class="wkday">        
-                <span id="wkday">Thu</span>
-                <span class="dailytemptext" id="dailytemp4">20°C</span>
-                <span class="weathericon">
-                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
-                </span>
-            </div> 
-            <div class="wkday">        
-                <span id="wkday">Fri</span>
-                <span class="dailytemptext" id="dailytemp5">20°C</span>
-                <span class="weathericon">
-                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
-                </span>
-            </div>
-            <div class="wkday">        
-                <span id="wkday">Sat</span>
-                <span class="dailytemptext" id="dailytemp6">20°C</span>
-                <span class="weathericon">
-                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/808/original/Untitled_design-fotor-bg-remover-20230702142452-fotor-2023070214266.png?1688300779">
-                </span>
-            </div>
-            </div>   
+        
+        <div class="header"><img id="header-image" class="img_header" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/087/736/original/header_image.png?1688231601">
+            <span class="dark-mode-container">  
+            <input type="checkbox" id="dark-mode-toggle"/>
+        <label class="dark-mode-button" for="dark-mode-toggle">
+        </label>
+        </div>
+        
+    
+        <div class="forecast_container">
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggle-switch">
+              <span class="slider"></span>
+              <span class="toggle-text"><b>°F</b></span>
+            </label>
+            <div class="weekday" id="forecast"></div>
+          </div>
             <div class="footer"><p>Open Sourced on <a href="https://github.com/bharbarasouza/weatherAppbyBharbara.git">Github</a></p><span class="emoji-container"><svg widht="30" height="30"><use xlink:href="graphics/github.svg#emoji"></use></svg></span><p>by <a href="https://www.linkedin.com/in/bharbarasouza/">Bharbara Souza</a></div>
             <div class="section_container">
             <div class="search_container">
@@ -95,5 +64,26 @@
     </div>
 <!--JS--> <script src="index.js"></script>
 <!--IconSet--> <script src="weatherIcons.js"></script>
+<script>
+ function toggleDarkMode() {
+      const mainStyle = document.getElementById("main-style");
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      const headerImage = document.getElementById("header-image");
+
+      if (darkModeToggle.checked) {
+        mainStyle.setAttribute("href", "dark-mode.css");
+        headerImage.src = "graphics/header_dark.png"; // Update the header image for dark mode
+      } else {
+        mainStyle.setAttribute("href", "style.css");
+        headerImage.src = "graphics/header_image.png"; // Update the header image for light mode
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", function() {
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      darkModeToggle.addEventListener("input", toggleDarkMode); 
+      toggleDarkMode();
+    });
+</script>
 </body>
 </html>
