@@ -71,13 +71,16 @@
       const headerImage = document.getElementById("header-image");
 
       if (darkModeToggle.checked) {
+        setTimeout(function() {
         mainStyle.setAttribute("href", "dark-mode.css");
-        headerImage.src = "graphics/header_dark.png"; // Update the header image for dark mode
-      } else {
+        headerImage.src = "graphics/header_dark.png"; 
+      }, 200); } else {
+        setTimeout(function() {
         mainStyle.setAttribute("href", "style.css");
-        headerImage.src = "graphics/header_image.png"; // Update the header image for light mode
-      }
+        headerImage.src = "graphics/header_image.png"; 
+      }, 200);
     }
+}
 
     window.addEventListener("DOMContentLoaded", function() {
       const darkModeToggle = document.getElementById("dark-mode-toggle");
