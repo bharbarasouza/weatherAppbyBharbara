@@ -73,10 +73,10 @@
       if (darkModeToggle.checked) {
         mainStyle.setAttribute("href", "dark-mode.css");
         headerImage.src = "graphics/header_dark.png"; // Update the header image for dark mode
-      } else {
+      }, 100); } else {
         mainStyle.setAttribute("href", "style.css");
         headerImage.src = "graphics/header_image.png"; // Update the header image for light mode
-      }
+      }, 100);
     }
 
     window.addEventListener("DOMContentLoaded", function() {
