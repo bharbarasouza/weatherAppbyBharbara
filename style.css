@@ -1,6 +1,7 @@
 /* Global Styles */
 
 body {
+    transition: 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +33,7 @@ body {
   }
   
   .container {
+    transition: 0.2s;
     width: auto;
     height: auto;
     margin: 10px;
