@@ -2,7 +2,6 @@
 
 body {
     display: flex;
-    transition: 0.2;
     justify-content: center;
     align-items: center;
     height: auto;
@@ -45,20 +44,18 @@ body {
     grid-template-rows: auto 300px auto 100px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     background: #F8F8FF;
-    transition: 0.2;
   }
   
   .header {
     grid-column: 1 / span 2;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-content: center;  
   }
   
   .img_header {
     max-width: 75%;
     margin-top: 20px;
-    transition: 0.2;
   }
   
   .dark-mode-button {
@@ -119,8 +116,7 @@ body {
     justify-self: center;
     margin-left: 100px; 
     width: 500px; 
-    top: -30px; 
-    transition: 0.2;
+    top: -30px;  
   } 
   
   #forecast.weekday{
@@ -144,7 +140,7 @@ body {
     font-size: 20px;
     color: #444654;
     background: white;
-    transition: 0.2;
+   
   }
   
   .dailytemptext {
@@ -202,6 +198,8 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    
+   
   }
 
   #mainweathericon {
@@ -216,6 +214,7 @@ body {
     grid-row: 1fr 1fr;
     justify-self: center;
     margin-top: 26px;
+    
   }
     
   .todays_weather {
@@ -523,7 +522,7 @@ body {
 }
 }
   
-@media (max-width: 413px) {
+@media (max-width: 420px) {
 
   body {
     background: linear-gradient(
@@ -553,18 +552,19 @@ body {
     .container {
       grid-template-columns: 1fr;
       grid-template-rows: auto 350px 1fr 80px;
-      min-width: 118%;
+      min-width: unset;
+      max-width: 115%;
       align-self: center;
+      justify-content: center;
     }
   
     .header {
       display: grid;
       grid-column: 1;
       justify-items: flex-start;
-      width: 130%;
-      padding-right: 0px; 
-      transform: scale(0.8);
-      }
+      width: 128%;
+      padding-left: 15px;
+    }
 
     .footer {
         grid-column-start: 1;
@@ -578,15 +578,21 @@ body {
       grid-row-end: 3;
       grid-column: 1;
       justify-self: center;
-      max-width: 95%;
+      max-width: 85%;
       padding-right: 10px;
-      transform: scale(0.8);
     }
 
-    #toggle-switch {
-      justify-self: flex-start;
-      margin-bottom: 10px;
+    #city_name {
+      font-size: 36px;
     }
+    
+
+    .toggle-switch {
+      margin-left: 40px;
+      margin-top: 15px;
+      padding-left: -15px;   
+ }
+
 
     .search_container {
       display: grid;
@@ -594,9 +600,8 @@ body {
       justify-content: flex-start;
       justify-self: center;
       margin-bottom: 40px;
-      transform: scale(0.8);
-
-    }
+      max-width: 90%;    
+}
 
     .search_bar {
       justify-self: flex-start;
@@ -604,7 +609,7 @@ body {
     }
 
     .search_style {
-      max-width: 420px;
+      max-width: 350px;
       justify-content: center;
     }
     .search_button {
@@ -617,14 +622,12 @@ body {
       grid-row: 3;
       justify-self: center;
       margin-left: 0;
-      margin-top: 120px;
-      transform: scale(0.8);
-
+      margin-top: 100px;
     }
     .weekday {
       justify-self: center;
-      transform: scale(0.8);
-  
+      justify-items: center;
+      padding-left: 21px;   
     }
     #date_Time {
       margin-left: 8px;      
@@ -633,14 +636,16 @@ body {
 
     li {
     position: relative;
-    left: -20px;
-    font-size: 15px;
+    left: -25px;
+    font-size: 12px;
     }
 
 .dark-mode-container {
-  right: 0px;
-  transform: scale(0.9);
+  right: -15px;
+  top: -25px;
+  transform: scale(0.8);
 }
-}    
+}
+      
     
   
