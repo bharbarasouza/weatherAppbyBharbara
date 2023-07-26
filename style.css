@@ -523,6 +523,124 @@ body {
 }
 }
   
-    
+@media (max-width: 413px) {
+
+  body {
+    background: linear-gradient(
+    70deg,
+    rgba(32, 149, 106, 0.7),
+    rgba(92, 155, 103, 0.7),
+    rgba(130, 164, 100, 0.7),
+    rgba(164, 169, 98, 0.7),
+    rgba(204, 175, 94, 0.7),
+    rgba(248, 139, 96, 0.8)
+  );
+  background-size: 200% auto; 
+  animation: gradientAnimation 8s linear infinite;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 350px 1fr 80px;
+      min-width: 118%;
+      align-self: center;
+    }
+  
+    .header {
+      display: grid;
+      grid-column: 1;
+      justify-items: flex-start;
+      width: 130%;
+      padding-right: 0px; 
+      transform: scale(0.8);
+      }
+
+    .footer {
+        grid-column-start: 1;
+        grid-row-start: 4;
+        justify-self: center;
+        justify-content: center;
+     }
+   
+    .todays_weather {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column: 1;
+      justify-self: center;
+      max-width: 95%;
+      padding-right: 10px;
+      transform: scale(0.8);
+    }
+
+    #toggle-switch {
+      justify-self: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .search_container {
+      display: grid;
+      grid-column: 1;
+      justify-content: flex-start;
+      justify-self: center;
+      margin-bottom: 40px;
+      transform: scale(0.8);
+
+    }
+
+    .search_bar {
+      justify-self: flex-start;
+      grid-row-start: 1;              
+    }
+
+    .search_style {
+      max-width: 420px;
+      justify-content: center;
+    }
+    .search_button {
+      margin-bottom: 5px;
+      grid-row-start: 1;
+    }
+  
+    .forecast_container {
+      display: grid;
+      grid-row: 3;
+      justify-self: center;
+      margin-left: 0;
+      margin-top: 120px;
+      transform: scale(0.8);
+
+    }
+    .weekday {
+      justify-self: center;
+      transform: scale(0.8);
+  
+    }
+    #date_Time {
+      margin-left: 8px;      
+      font-size: 16px;
+    }
+
+    li {
+    position: relative;
+    left: -20px;
+    font-size: 15px;
+    }
+
+.dark-mode-container {
+  right: 0px;
+  transform: scale(0.9);
+}
+}    
     
   
