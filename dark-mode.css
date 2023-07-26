@@ -563,6 +563,7 @@ margin-left: 25px;
       grid-column: 1;
       justify-content: center;
       width: 120%;
+        padding-left: 20px;
     }
 
     .footer {
