@@ -2,6 +2,7 @@
 
 body {
     display: flex;
+    transition: 0.2;
     justify-content: center;
     align-items: center;
     height: auto;
@@ -44,18 +45,20 @@ body {
     grid-template-rows: auto 300px auto 100px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     background: #F8F8FF;
+    transition: 0.2;
   }
   
   .header {
     grid-column: 1 / span 2;
     display: flex;
     justify-content: center;
-    align-content: center;  
+    align-content: center;
   }
   
   .img_header {
     max-width: 75%;
     margin-top: 20px;
+    transition: 0.2;
   }
   
   .dark-mode-button {
@@ -116,7 +119,8 @@ body {
     justify-self: center;
     margin-left: 100px; 
     width: 500px; 
-    top: -30px;  
+    top: -30px; 
+    transition: 0.2;
   } 
   
   #forecast.weekday{
@@ -140,7 +144,7 @@ body {
     font-size: 20px;
     color: #444654;
     background: white;
-   
+    transition: 0.2;
   }
   
   .dailytemptext {
@@ -198,8 +202,6 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    
-   
   }
 
   #mainweathericon {
@@ -214,7 +216,6 @@ body {
     grid-row: 1fr 1fr;
     justify-self: center;
     margin-top: 26px;
-    
   }
     
   .todays_weather {
