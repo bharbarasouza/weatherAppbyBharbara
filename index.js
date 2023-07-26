@@ -123,6 +123,7 @@ getForecast(response.data.coord);
     var toggleSwitch = document.getElementById("toggle-switch");
   toggleSwitch.checked = false;
     search(city);
+    document.querySelector("#search-text-input").value = "";
   }   
 
   document.querySelector("#search-form").addEventListener("submit", searchCity);
