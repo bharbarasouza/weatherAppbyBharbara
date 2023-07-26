@@ -553,7 +553,6 @@ body {
       grid-template-columns: 1fr;
       grid-template-rows: auto 350px 1fr 80px;
       min-width: unset;
-      max-width: 115%;
       align-self: center;
       justify-content: center;
     }
@@ -561,9 +560,9 @@ body {
     .header {
       display: grid;
       grid-column: 1;
-      justify-items: flex-start;
-      width: 128%;
-      padding-left: 15px;
+      justify-content: center;
+      width: 120%;
+      margin-left: 30px;
     }
 
     .footer {
@@ -578,7 +577,7 @@ body {
       grid-row-end: 3;
       grid-column: 1;
       justify-self: center;
-      max-width: 85%;
+      max-width: 80%;
       padding-right: 10px;
     }
 
@@ -627,8 +626,11 @@ body {
     .weekday {
       justify-self: center;
       justify-items: center;
-      padding-left: 21px;   
+      padding-left: 21px; 
+      max-width: 85%;  
     }
+
+
     #date_Time {
       margin-left: 8px;      
       font-size: 16px;
