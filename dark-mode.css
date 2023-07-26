@@ -527,14 +527,13 @@ margin-left: 25px;
 
   body {
     background: linear-gradient(
-    70deg,
-    rgba(32, 149, 106, 0.7),
-    rgba(92, 155, 103, 0.7),
-    rgba(130, 164, 100, 0.7),
-    rgba(164, 169, 98, 0.7),
-    rgba(204, 175, 94, 0.7),
-    rgba(248, 139, 96, 0.8)
-  );
+        70deg, 
+        rgb(241, 100, 208), 
+        rgb(96, 80, 143),
+        rgb(81, 67, 117), 
+        rgb(66, 55, 92), 
+        rgb(52, 44, 68)
+     );
   background-size: 200% auto; 
   animation: gradientAnimation 8s linear infinite;
   }
