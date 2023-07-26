@@ -31,7 +31,7 @@
             </label>
             <div class="weekday" id="forecast"></div>
           </div>
-            <div class="footer"><p>Open Sourced on <a href="https://github.com/bharbarasouza/weatherAppbyBharbara.git">Github</a></p><span class="emoji-container"><svg widht="30" height="30"><use xlink:href="graphics/github.svg#emoji"></use></svg></span><p>by <a href="https://www.linkedin.com/in/bharbarasouza/">Bharbara Souza</a></div>
+            <div class="footer"><p>Open Sourced on <a href="https://github.com/bharbarasouza/weatherAppbyBharbara.git">Github</a></p><span class="emoji-container"><svg id="github-icon" height="30"><use xlink:href=""></use></svg></span><p>by <a href="https://www.linkedin.com/in/bharbarasouza/">Bharbara Souza</a></div>
             <div class="section_container">
             <div class="search_container">
             <div class="search_bar">
@@ -65,28 +65,34 @@
 <!--JS--> <script src="index.js"></script>
 <!--IconSet--> <script src="weatherIcons.js"></script>
 <script>
- function toggleDarkMode() {
-      const mainStyle = document.getElementById("main-style");
-      const darkModeToggle = document.getElementById("dark-mode-toggle");
-      const headerImage = document.getElementById("header-image");
+  function toggleDarkMode() {
+    const mainStyle = document.getElementById("main-style");
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const headerImage = document.getElementById("header-image");
+    const githubIcon = document.getElementById("github-icon");
 
-      if (darkModeToggle.checked) {
-        setTimeout(function() {
+    if (darkModeToggle.checked) {
+      setTimeout(function() {
         mainStyle.setAttribute("href", "dark-mode.css");
-        headerImage.src = "graphics/header_dark.png"; 
-      }, 100); } else {
-        setTimeout(function() {
+        headerImage.src = "graphics/header_dark.png";
+        githubIcon.querySelector("use").setAttribute("xlink:href", "graphics/github-light.svg#emojilight");
+      }, 200);
+    } else {
+      setTimeout(function() {
         mainStyle.setAttribute("href", "style.css");
-        headerImage.src = "graphics/header_image.png"; 
-      }, 100);
+        headerImage.src = "graphics/header_image.png";
+        githubIcon.querySelector("use").setAttribute("xlink:href", "graphics/github.svg#emoji");
+      }, 200);
     }
-}
+  }
 
-    window.addEventListener("DOMContentLoaded", function() {
-      const darkModeToggle = document.getElementById("dark-mode-toggle");
-      darkModeToggle.addEventListener("input", toggleDarkMode); 
-      toggleDarkMode();
-    });
+  window.addEventListener("DOMContentLoaded", function() {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    darkModeToggle.addEventListener("input", toggleDarkMode);
+    toggleDarkMode();
+  });
 </script>
+
+
 </body>
 </html>
