@@ -553,6 +553,7 @@ body {
       grid-template-columns: 1fr;
       grid-template-rows: auto 350px 1fr 80px;
       min-width: unset;
+      max-width: 118%;
       align-self: center;
       justify-content: center;
     }
@@ -633,13 +634,11 @@ body {
 
     #date_Time {
       margin-left: 8px;      
-      font-size: 16px;
+      font-size: 15px;
     }
 
     li {
-    position: relative;
-    left: -25px;
-    font-size: 12px;
+      font-size: x-small;
     }
 
 .dark-mode-container {
