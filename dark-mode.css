@@ -58,7 +58,7 @@ body {
   .img_header {
     max-width: 70%;
     margin-top: 20px;
-    
+margin-left: 25px;    
   }
   
   .dark-mode-button {
@@ -162,7 +162,7 @@ body {
     grid-row: 2;
     display: flex;
     justify-self: center;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 40px;
   }
   
@@ -267,7 +267,6 @@ body {
     margin-right: 5px;
     padding: 0;
     max-width: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
  }
   
  /* Search Bar Styles */
@@ -510,12 +509,13 @@ body {
     }
     #date_Time {
       margin-left: 8px;      
-      font-size: 17px;
+      font-size: 16px;
     }
 
     li {
     position: relative;
     left: -20px;
+    font-size: 15px;
     }
 .dark-mode-container {
   right: 0px;
